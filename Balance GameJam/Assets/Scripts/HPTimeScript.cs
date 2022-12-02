@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class HPTimeScript : MonoBehaviour
 {
-    Slider slider;
+    public Slider slider;
     public float startTime = 10f;
     float currentTime; 
 
