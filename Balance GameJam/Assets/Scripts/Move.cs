@@ -16,7 +16,9 @@ public class Move : MonoBehaviour
     public float dashingPower;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
-  //  [SerializeField] private TrailRenderer tr;
+    // [SerializeField] private TrailRenderer tr;
+
+    public event EventHandler OnUsedWind;
 
     void Start(){
         GetComponent<Scoring>().OnPickedWind += enableWind;
@@ -52,8 +54,6 @@ public class Move : MonoBehaviour
          MovePlayer(keyMoveX * moveSpeed * Time.deltaTime, keyMoveY * moveSpeed * Time.deltaTime);
           
         //}
-
-
     }
 
     private void MovePlayer(float Xmove, float Ymove)
@@ -65,6 +65,7 @@ public class Move : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        OnUsedWind?.Invoke(this,EventArgs.Empty);
         canDash = false;
         isDashing = true;
 

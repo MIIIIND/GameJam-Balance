@@ -6,6 +6,8 @@ public class spawn : MonoBehaviour
 {
     private bool canEarth=false;
 
+    public event EventHandler OnUsedEarth;
+
     [SerializeField] private Transform pfBlock;
     void Start(){
         GetComponent<Scoring>().OnPickedEarth += enableEarth;
@@ -21,6 +23,7 @@ public class spawn : MonoBehaviour
             Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
             if(Input.GetKeyDown("e"))
             {
+                OnUsedEarth?.Invoke(this,EventArgs.Empty);
                 Instantiate(pfBlock,mousePosition,Quaternion.identity);
             }
         }

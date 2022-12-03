@@ -25,12 +25,10 @@ public class Scoring : MonoBehaviour
         }
         else if(collision.CompareTag("Earth")){
             OnPickedEarth?.Invoke(this,EventArgs.Empty);
-            print("eath");
         }
         else if (collision.CompareTag("Enemi"))
         {
             OnEnnemyHit?.Invoke(this,EventArgs.Empty);
-            print("ennemy hits player");
         }
     }
 }
