@@ -11,6 +11,13 @@ public class Aim : MonoBehaviour
         public float angle;
     }
 
+    public event EventHandler<OnShootBubbleEventArgs> OnShootBubble;
+    public class OnShootBubbleEventArgs : EventArgs{
+        public Vector3 tracker;
+        public Vector3 shootPosition;
+        public float angle;
+    }
+
     public Transform aimTracker;
     public Transform aimPosition;
     private float angle;
@@ -18,10 +25,27 @@ public class Aim : MonoBehaviour
     private bool spawned = false;
     private float decay;
 
+    private bool spawnedB = false;
+    private float decayB;
+
+    private bool canFire = true;
+    private bool canWater = false;
+
+    void start(){
+        GetComponent<pickFire>().pickedFire += enableFire;
+    }
+
+    void enableFire(object sender, EventArgs e){
+        canFire=true;
+    }
+
     void Update()
     {
         Aiming();
-        Shooting();
+        if(canFire){
+           Shooting(); 
+        }
+        ShootingBubble();
     }
 
     private void Aiming(){
@@ -34,10 +58,24 @@ public class Aim : MonoBehaviour
     private void Shooting(){
         Reset();
         if(Input.GetMouseButton(0) && !spawned){
-            decay = 0.1f;
+            decay = 0.5f;
             spawned = true;
             Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
             OnShoot?.Invoke(this,new OnShootEventArgs{
+                tracker = aimPosition.position,
+                shootPosition = mousePosition,
+                angle = this.angle
+            });
+        }
+    }
+
+    private void ShootingBubble(){
+        Reset();
+        if(Input.GetMouseButton(1) && !spawnedB){
+            decayB = 0.005f;
+            spawnedB = true;
+            Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
+            OnShootBubble?.Invoke(this,new OnShootBubbleEventArgs{
                 tracker = aimPosition.position,
                 shootPosition = mousePosition,
                 angle = this.angle
@@ -55,6 +93,16 @@ public class Aim : MonoBehaviour
         {
             decay = 0;
             spawned = false;
+        }
+
+        if(spawnedB && decayB > 0)
+        {
+            decayB -= Time.deltaTime;
+        }
+        if(decayB < 0)
+        {
+            decayB = 0;
+            spawnedB = false;
         }
     }
 }
