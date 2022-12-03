@@ -31,7 +31,11 @@ public class HPTimeScript : MonoBehaviour
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        slider.value = currentTime;
+
+        float sliderValueFloat = currentTime/startTime;
+        float sliderValueFloat2 = sliderValueFloat*17;
+        int sliderValueInt = (int)sliderValueFloat2;
+        slider.value = sliderValueInt;
         
     
 

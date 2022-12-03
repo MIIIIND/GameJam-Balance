@@ -32,8 +32,12 @@ public class LifeTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        string seconds = (currentTime % 60).ToString("00");
+        string minutes = (Math.Floor(currentTime / 60) % 60).ToString("00");
+
+
         currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
+        countdownText.text = minutes + ":" + seconds;
 
         if (currentTime <= 0) 
         {
