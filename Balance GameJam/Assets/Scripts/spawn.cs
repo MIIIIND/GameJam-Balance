@@ -10,7 +10,7 @@ public class spawn : MonoBehaviour
     void Update()
     {
         Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
-        if(Input.GetMouseButtonDown(1))
+        if(Input.GetKeyDown("e"))
         {
             Instantiate(pfBlock,mousePosition,Quaternion.identity);
         }

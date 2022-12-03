@@ -9,7 +9,7 @@ public class spawnMob : MonoBehaviour
 
     [SerializeField] private Transform pfMob;
     void Start () {
-        InvokeRepeating("OutputTime", 1f, 1f);  //1s delay, repeat every 1s
+        InvokeRepeating("OutputTime", 1f, 1f);  
     }
     void OutputTime() {
         Transform mob = Instantiate(pfMob,location.position,Quaternion.identity);
