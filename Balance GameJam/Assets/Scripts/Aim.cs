@@ -20,6 +20,7 @@ public class Aim : MonoBehaviour
 
     public Transform aimTracker;
     public Transform aimPosition;
+    public Transform fire;
     private float angle;
 
     private bool spawned = false;
@@ -28,24 +29,30 @@ public class Aim : MonoBehaviour
     private bool spawnedB = false;
     private float decayB;
 
-    private bool canFire = true;
+    private bool canFire = false;
     private bool canWater = false;
 
-    void start(){
-        GetComponent<pickFire>().pickedFire += enableFire;
+    void Start(){
+        GetComponent<Scoring>().OnPickedFire += enableFire;
+        GetComponent<Scoring>().OnPickedWater += enableWater;
     }
 
     void enableFire(object sender, EventArgs e){
         canFire=true;
     }
+    void enableWater(object sender, EventArgs e){
+        canWater=true;
+    }
 
-    void Update()
+    void FixedUpdate()
     {
         Aiming();
         if(canFire){
            Shooting(); 
         }
-        ShootingBubble();
+        if(canWater){
+           ShootingBubble(); 
+        }
     }
 
     private void Aiming(){

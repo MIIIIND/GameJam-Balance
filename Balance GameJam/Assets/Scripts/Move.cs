@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class Move : MonoBehaviour
 {
@@ -10,14 +11,20 @@ public class Move : MonoBehaviour
     private float keyMoveY = 0;
     private Vector3 velocity = Vector3.zero;
 
-    private bool canDash = true;
+    private bool canDash = false;
     private bool isDashing;
     public float dashingPower;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
   //  [SerializeField] private TrailRenderer tr;
 
+    void Start(){
+        GetComponent<Scoring>().OnPickedWind += enableWind;
+    }
 
+    void enableWind(object sender, EventArgs e){
+        canDash=true;
+    }
 
     private void Update()
     {
@@ -25,15 +32,11 @@ public class Move : MonoBehaviour
         keyMoveY = 0;
         keyMoveX = Input.GetAxis("Horizontal");
         keyMoveY = Input.GetAxis("Vertical");
-        print(Input.GetAxis("Horizontal"));
-        print(Input.GetAxis("Vertical"));
 
         if (Input.GetKeyDown(KeyCode.Space) && canDash) 
         {
             StartCoroutine(Dash());
         }
-
-
     }
     
     private void FixedUpdate()

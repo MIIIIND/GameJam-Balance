@@ -1,7 +1,8 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class pickFire : MonoBehaviour
+public class pickEmptiness : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag("Player")){

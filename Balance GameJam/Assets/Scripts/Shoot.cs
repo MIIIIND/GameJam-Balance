@@ -14,6 +14,6 @@ public class Shoot : MonoBehaviour
         Transform fireballTransform = Instantiate(pfFireball,e.tracker,Quaternion.identity);
 
         Vector3 shootDir = (e.shootPosition - e.tracker).normalized;
-        fireballTransform .GetComponent<fireball>().Setup(shootDir,e.angle);
+        fireballTransform.GetComponent<fireball>().Setup(shootDir,e.angle);
     }
 }
