@@ -12,7 +12,6 @@ public class Move : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     private bool canDash = false;
-    private bool isDashing;
     public float dashingPower;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
@@ -67,7 +66,6 @@ public class Move : MonoBehaviour
     {
         OnUsedWind?.Invoke(this,EventArgs.Empty);
         canDash = false;
-        isDashing = true;
 
 
         if(keyMoveX > 0 && keyMoveY > 0) 
@@ -107,7 +105,6 @@ public class Move : MonoBehaviour
         //  tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
     //    tr.emitting = false;
-        isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }

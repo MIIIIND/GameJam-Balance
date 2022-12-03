@@ -26,7 +26,6 @@ public class LifeTimer : MonoBehaviour
     public void RemoveTime(object sender, EventArgs e)
     {
         currentTime = currentTime - 1;
-        print("Remove Time activated");
     }
 
 
