@@ -6,5 +6,9 @@ public class hitbox : MonoBehaviour
         if(collision.CompareTag("Ball")){
             Destroy(transform.parent.parent.gameObject);
         }
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(transform.parent.parent.gameObject);
+        }
     }
 }

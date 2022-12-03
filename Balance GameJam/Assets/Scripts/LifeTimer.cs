@@ -42,7 +42,7 @@ public class LifeTimer : MonoBehaviour
         if (currentTime <= 0) 
         {
             currentTime= 0;
-
+            
             // insert Lose screen  
             
         }
