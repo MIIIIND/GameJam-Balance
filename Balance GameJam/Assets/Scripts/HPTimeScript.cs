@@ -5,21 +5,28 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static UtilsClass;
 
 
 public class HPTimeScript : MonoBehaviour
 {
     public Slider slider;
     public float startTime = 10f;
-    float currentTime; 
+    float currentTime;
+    public Transform player; 
 
 
 
     void Start()
     {
+
         currentTime = startTime;
         slider = GetComponent<Slider>();
+        player.GetComponent<Scoring>().OnEnnemyHit += RemoveTime;
+        
     }
+
+    
 
     void Update()
     {
@@ -38,13 +45,16 @@ public class HPTimeScript : MonoBehaviour
         }
     }
 
+
+
     public void addTime()
     {
 
     }
 
-    public void removeTime()
+    public void RemoveTime(object sender, EventArgs e)
     {
-
+        currentTime = currentTime - 1;
+       
     }
 }

@@ -10,6 +10,7 @@ TagManager:
   - Fire
   - Emptiness
   - Water
+  - Enemi
   layers:
   - Default
   - TransparentFX
