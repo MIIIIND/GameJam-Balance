@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 14192670}
   - component: {fileID: 14192669}
   - component: {fileID: 14192668}
+  - component: {fileID: 14192671}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,6 +235,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14192671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14192667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0212c2b7406094fa2e0c02a2b954cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &32308922
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,9 +447,10 @@ GameObject:
   - component: {fileID: 237147274}
   - component: {fileID: 237147273}
   - component: {fileID: 237147272}
+  - component: {fileID: 237147275}
   m_Layer: 0
   m_Name: Wind
-  m_TagString: Untagged
+  m_TagString: Wind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -534,6 +548,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &237147275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237147271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca54c376a39dbc4a90c0ed65ce938c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &502970126
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +787,7 @@ GameObject:
   - component: {fileID: 633068605}
   - component: {fileID: 633068604}
   - component: {fileID: 633068606}
+  - component: {fileID: 633068607}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -849,7 +876,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 200
-  speedboost: 0
   rb: {fileID: 633068602}
   dashingPower: 50
 --- !u!61 &633068601
@@ -939,6 +965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimTracker: {fileID: 843454134}
   aimPosition: {fileID: 2004787512}
+  fire: {fileID: 0}
 --- !u!114 &633068606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,6 +979,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfBubble: {fileID: 7037020023220330773, guid: 1083ef41afa79694c91ff99847a76599, type: 3}
+--- !u!114 &633068607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633068597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4be22063ed0814a9c08698f21370e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &702896192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,9 +1279,10 @@ GameObject:
   - component: {fileID: 839131980}
   - component: {fileID: 839131979}
   - component: {fileID: 839131982}
+  - component: {fileID: 839131983}
   m_Layer: 0
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1341,6 +1381,18 @@ Transform:
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &839131982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839131978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7b910382d7cd947a75a9b17f5f19f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &839131983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8053,9 +8105,10 @@ GameObject:
   - component: {fileID: 1918112498}
   - component: {fileID: 1918112497}
   - component: {fileID: 1918112496}
+  - component: {fileID: 1918112499}
   m_Layer: 0
   m_Name: Earth
-  m_TagString: Untagged
+  m_TagString: Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8153,6 +8206,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1918112499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918112495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d550432f3277489026a22c3c1085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1933773828
 GameObject:
   m_ObjectHideFlags: 0
@@ -8164,9 +8229,10 @@ GameObject:
   - component: {fileID: 1933773831}
   - component: {fileID: 1933773830}
   - component: {fileID: 1933773829}
+  - component: {fileID: 1933773832}
   m_Layer: 0
   m_Name: Emptiness
-  m_TagString: Untagged
+  m_TagString: Emptiness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8264,6 +8330,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1933773832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933773828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ca851912218a1408788b9c04c0801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1949363498
 PrefabInstance:
   m_ObjectHideFlags: 0

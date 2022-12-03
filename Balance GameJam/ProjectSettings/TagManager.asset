@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ball
+  - Wind
+  - Earth
+  - Fire
+  - Emptiness
+  - Water
   layers:
   - Default
   - TransparentFX

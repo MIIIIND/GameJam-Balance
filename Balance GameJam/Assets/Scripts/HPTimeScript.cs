@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class HPTimeScript : MonoBehaviour
@@ -30,8 +31,9 @@ public class HPTimeScript : MonoBehaviour
         if (currentTime <= 0) 
         {
             currentTime= 0;
-            print("pierdolsie");
-            // END GAME
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            print("Scene reset");
 
         }
     }
