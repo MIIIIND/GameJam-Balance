@@ -34,6 +34,9 @@ public class LifeTimer : MonoBehaviour
         if(currentTime + 10 <= startingTime){
             currentTime += 10;
         }
+        else{
+            currentTime = startingTime;
+        }
     }
 
 

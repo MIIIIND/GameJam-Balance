@@ -49,13 +49,6 @@ public class HPTimeScript : MonoBehaviour
         }
     }
 
-
-
-    public void addTime()
-    {
-
-    }
-
     public void RemoveTime(object sender, EventArgs e)
     {
         currentTime = currentTime - 1;
@@ -66,6 +59,9 @@ public class HPTimeScript : MonoBehaviour
     {   
         if(currentTime + 10 <= startTime){
             currentTime += 10;
+        }
+        else{
+            currentTime = startTime;
         }
     }
 }
