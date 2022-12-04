@@ -28,7 +28,7 @@ public class Scoring : MonoBehaviour
         }
         else if (collision.CompareTag("Enemi"))
         {
-            OnEnnemyHit?.Invoke(this,EventArgs.Empty);
+            OnEnnemyHit?.Invoke(this, EventArgs.Empty);
         }
     }
 }
