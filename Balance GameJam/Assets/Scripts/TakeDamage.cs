@@ -19,7 +19,7 @@ public class TakeDamage : MonoBehaviour
     void damageColorChange(object sender, EventArgs e)
     {
         GetComponent<SpriteRenderer>().color = new Color(255, 0, 0);
-        print("color red");
+ 
         timer = 0;
         
 
@@ -30,7 +30,7 @@ public class TakeDamage : MonoBehaviour
     void Update()
     {
        timer += 1 * Time.deltaTime;
-       print(timer.ToString());
+    
        
         if (timer > 0.2f)
         {
