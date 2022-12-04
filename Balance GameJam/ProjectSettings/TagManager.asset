@@ -11,6 +11,7 @@ TagManager:
   - Emptiness
   - Water
   - Enemi
+  - Health
   layers:
   - Default
   - TransparentFX

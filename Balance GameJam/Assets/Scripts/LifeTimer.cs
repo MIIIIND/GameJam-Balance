@@ -21,11 +21,19 @@ public class LifeTimer : MonoBehaviour
     {
         currentTime = startingTime;
         player.GetComponent<Scoring>().OnEnnemyHit += RemoveTime;
+        player.GetComponent<Scoring>().OnHealthItem += AddTime;
     }
 
     public void RemoveTime(object sender, EventArgs e)
     {
         currentTime = currentTime - 1;
+    }
+
+    public void AddTime(object sender, EventArgs e)
+    {   
+        if(currentTime + 10 <= startingTime){
+            currentTime += 10;
+        }
     }
 
 

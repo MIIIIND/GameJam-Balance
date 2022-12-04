@@ -9,6 +9,7 @@ public class Scoring : MonoBehaviour
     public event EventHandler OnPickedWind;
     public event EventHandler OnPickedEarth;
     public event EventHandler OnEnnemyHit;
+    public event EventHandler OnHealthItem;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag("Fire") && GameObject.Find("OffrandeFire") == null){
@@ -29,6 +30,10 @@ public class Scoring : MonoBehaviour
         else if (collision.CompareTag("Enemi"))
         {
             OnEnnemyHit?.Invoke(this, EventArgs.Empty);
+        }
+        else if (collision.CompareTag("Health"))
+        {
+            OnHealthItem?.Invoke(this, EventArgs.Empty);
         }
     }
 }

@@ -23,7 +23,7 @@ public class HPTimeScript : MonoBehaviour
         currentTime = startTime;
         slider = GetComponent<Slider>();
         player.GetComponent<Scoring>().OnEnnemyHit += RemoveTime;
-        
+        player.GetComponent<Scoring>().OnHealthItem += AddTime;
     }
 
     
@@ -60,5 +60,12 @@ public class HPTimeScript : MonoBehaviour
     {
         currentTime = currentTime - 1;
        
+    }
+
+    public void AddTime(object sender, EventArgs e)
+    {   
+        if(currentTime + 10 <= startTime){
+            currentTime += 10;
+        }
     }
 }
