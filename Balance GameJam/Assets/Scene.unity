@@ -1224,6 +1224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 556983188}
   - component: {fileID: 556983189}
+  - component: {fileID: 556983190}
   m_Layer: 5
   m_Name: AirMeeter
   m_TagString: Untagged
@@ -1299,12 +1300,25 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.324
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &556983190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556983187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0cd710d95635594d99dbfa8f09bcf4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windValue: {fileID: 633068608}
 --- !u!1 &564104022
 GameObject:
   m_ObjectHideFlags: 0
@@ -8936,6 +8950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1146543286}
   - component: {fileID: 1146543287}
+  - component: {fileID: 1146543288}
   m_Layer: 5
   m_Name: EarthMeeter
   m_TagString: Untagged
@@ -9011,12 +9026,25 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.324
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1146543288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146543285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3886073056f6447841427e9d0f4752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  earthValue: {fileID: 633068608}
 --- !u!1 &1237626098
 GameObject:
   m_ObjectHideFlags: 0
@@ -16269,6 +16297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910168876}
   - component: {fileID: 1910168877}
+  - component: {fileID: 1910168878}
   m_Layer: 5
   m_Name: WaterMeeter
   m_TagString: Untagged
@@ -16344,12 +16373,25 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.324
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1910168878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910168875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae617e610a120f248a33161f8c966421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterValue: {fileID: 633068608}
 --- !u!1 &1918112495
 GameObject:
   m_ObjectHideFlags: 0
