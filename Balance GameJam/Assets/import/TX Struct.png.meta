@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1387,7 +1387,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TX Struct_51: 772663835
       TX Struct_28: -948668903
       TX Struct_45: -1769031600
       TX Struct_7: 301750725
@@ -1428,8 +1427,8 @@ TextureImporter:
       TX Struct_55: -1728210344
       TX Struct_4: -1319340464
       TX Struct_9: -1182213294
-      TX Struct_34: -1836463143
       TX Struct_43: -2107047349
+      TX Struct_34: -1836463143
       TX Struct_0: 95913365
       TX Struct_35: -66928193
       TX Struct_32: 1503490015
@@ -1443,6 +1442,7 @@ TextureImporter:
       TX Struct_3: 2110430091
       TX Struct_38: -1457563141
       TX Struct_19: -529542540
+      TX Struct_51: 772663835
       TX Struct_2: 1098622353
       TX Struct_41: -1070743626
       TX Struct_47: 238919745
