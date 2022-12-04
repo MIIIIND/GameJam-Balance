@@ -37,7 +37,7 @@ public class ElementalOverload : MonoBehaviour
         earthGaugeBalance = earthGauge;
     }
 
-    void decreaseWind(object sender, EventArgs e){
+    void decreaseWind(object sender, EventArgs e){    
         windGaugeBalance -= 1;
     }
 
@@ -55,7 +55,7 @@ public class ElementalOverload : MonoBehaviour
 
     void Update()
     {
-        if(fireGauge<=0 || waterGauge<=0 || windGauge<=0 || earthGauge<=0){
+        if(fireGaugeBalance<=0 || waterGaugeBalance<=0 || windGaugeBalance<=0 || earthGaugeBalance<=0){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

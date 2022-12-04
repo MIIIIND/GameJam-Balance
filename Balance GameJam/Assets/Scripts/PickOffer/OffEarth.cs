@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pickEmptiness : MonoBehaviour
+public class OffEarth : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.CompareTag("Player") && GameObject.Find("OffrandeEmptiness") == null){
+        if(collision.CompareTag("Player")){
             Destroy(gameObject);
         }
     }
