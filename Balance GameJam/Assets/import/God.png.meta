@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70ef1f2de38688643921742e91e623a9
-      internalID: 1724999443
+      spriteID: 648c4b92db031944299c5663e9297052
+      internalID: 1445634783
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a210e173441f3c5479484f427a2ed12d
-      internalID: 18386242
+      spriteID: 242d96ec20ccc524b9b686ad21533426
+      internalID: -573569515
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c769c8d30fa25f44eb35079c710faf8c
-      internalID: 761880989
+      spriteID: 86121acb59970b649aaa75abe177c217
+      internalID: -182071090
       vertices: []
       indices: 
       edges: []
@@ -182,29 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca311a4c4d1c5c24291e126f07aad096
-      internalID: 1893005410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: God_4
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 48
-        width: 28
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64229c88b09c68047ba998ef63f32a6b
-      internalID: -700853432
+      spriteID: 4fb6673e3fe15704cb589acf7bbc0cf3
+      internalID: -1844063844
       vertices: []
       indices: 
       edges: []
@@ -220,11 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      God_4: -700853432
-      God_3: 1893005410
-      God_1: 18386242
-      God_2: 761880989
-      God_0: 1724999443
+      God_3: -1844063844
+      God_1: -573569515
+      God_2: -182071090
+      God_0: 1445634783
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

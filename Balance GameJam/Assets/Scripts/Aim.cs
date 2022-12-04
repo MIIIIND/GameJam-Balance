@@ -65,7 +65,7 @@ public class Aim : MonoBehaviour
     private void Shooting(){
         Reset();
         if(Input.GetMouseButton(0) && !spawned){
-            decay = 0.5f;
+            decay = 0.09f;
             spawned = true;
             Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
             OnShoot?.Invoke(this,new OnShootEventArgs{
