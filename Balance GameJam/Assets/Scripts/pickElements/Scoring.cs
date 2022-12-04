@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Scoring : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class Scoring : MonoBehaviour
     public event EventHandler OnEnnemyHit;
     public event EventHandler OnHealthItem;
 
+    public TilemapRenderer fireColorActivation;
+
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag("Fire") && GameObject.Find("OffrandeFire") == null){
             OnPickedFire?.Invoke(this,EventArgs.Empty);
+            fireColorActivation.GetComponent<TilemapRenderer>().sortingOrder = 1;
         }
         else if(collision.CompareTag("Water") && GameObject.Find("OffrandeWater") == null){
             OnPickedWater?.Invoke(this,EventArgs.Empty);

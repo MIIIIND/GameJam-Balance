@@ -33,7 +33,7 @@ public class HPTimeScript : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
 
         float sliderValueFloat = currentTime/startTime;
-        float sliderValueFloat2 = sliderValueFloat*17;
+        float sliderValueFloat2 = sliderValueFloat*20;
         int sliderValueInt = (int)sliderValueFloat2;
         slider.value = sliderValueInt;
         
