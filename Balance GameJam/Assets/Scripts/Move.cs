@@ -29,6 +29,8 @@ public class Move : MonoBehaviour
 
     private void Update()
     {
+
+
         keyMoveX = 0;
         keyMoveY = 0;
         keyMoveX = Input.GetAxis("Horizontal");
