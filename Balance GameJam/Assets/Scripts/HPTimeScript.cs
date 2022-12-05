@@ -24,9 +24,10 @@ public class HPTimeScript : MonoBehaviour
         slider = GetComponent<Slider>();
         player.GetComponent<Scoring>().OnEnnemyHit += RemoveTime;
         player.GetComponent<Scoring>().OnHealthItem += AddTime;
+        Screen.SetResolution(1980, 1080, true);
     }
 
-    
+
 
     void Update()
     {
