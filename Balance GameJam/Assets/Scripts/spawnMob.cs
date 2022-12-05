@@ -6,7 +6,7 @@ public class spawnMob : MonoBehaviour
 {
     public Transform target;
     public Transform location;
-    private float rate = 1;
+    private float rate = -1;
     private bool lockEarth = false;
     private bool lockFire = false;
     private bool lockWater = false;
@@ -15,7 +15,7 @@ public class spawnMob : MonoBehaviour
 
     [SerializeField] private Transform pfMob;
     void Start () {
-        InvokeRepeating("OutputTime", rate, rate);  
+        InvokeRepeating("OutputTime", 1f, 1f);  
     }
 
     void Update(){
