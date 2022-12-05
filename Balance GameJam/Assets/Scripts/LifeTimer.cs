@@ -51,7 +51,7 @@ public class LifeTimer : MonoBehaviour
 
 
         currentTime -= 1 * Time.deltaTime;
-        countdownText.text = minutes + ":" + seconds;
+        countdownText.text =  seconds;
 
         if (currentTime <= 0) 
         {
