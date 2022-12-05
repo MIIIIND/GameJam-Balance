@@ -29,8 +29,8 @@ public class Aim : MonoBehaviour
     private bool spawnedB = false;
     private float decayB;
 
-    private bool canFire = false;
-    private bool canWater = false;
+    public bool canFire = false;
+    public bool canWater = false;
 
     void Start(){
         GetComponent<Scoring>().OnPickedFire += enableFire;

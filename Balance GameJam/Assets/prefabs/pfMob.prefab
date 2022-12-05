@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2785839236765662349}
   - component: {fileID: 2785839236765662348}
-  - component: {fileID: 2785839236765662351}
+  - component: {fileID: 6262544124357730677}
   m_Layer: 0
   m_Name: Body Golem 2
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -861298422, guid: 2f4b2825b17429441886ea237f858220, type: 3}
+  m_Sprite: {fileID: -471807947, guid: 7fcf1ee49f46f9f489ac4d0a13d8c6cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2785839236765662351
+--- !u!95 &6262544124357730677
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 2785839236765662344}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e20ab0269a88969409c736fa390cff3a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 34fc544762539f74bb5e633922f35537, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01923275, y: -0.16691619}
+  m_Offset: {x: -0.07812467, y: 0.057005882}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -163,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64773226, y: 0.77361596}
+  m_Size: {x: 0.42965162, y: 0.8242419}
   m_EdgeRadius: 0
 --- !u!114 &4073849205064877843
 MonoBehaviour:
@@ -246,7 +246,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014158338, y: -0.19467771}
+  m_Offset: {x: -0.07735765, y: 0.05066298}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -257,7 +257,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.44782323, y: 0.6106446}
+  m_Size: {x: 0.33488858, y: 0.6651647}
   m_EdgeRadius: 0
 --- !u!114 &2409333083153601967
 MonoBehaviour:
@@ -271,6 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4969f4a37c3194489b9a7e662e0c6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3.5
   graphics: {fileID: 2785839236765662348}
   target: {fileID: 0}

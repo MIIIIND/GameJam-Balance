@@ -27,5 +27,6 @@ public class followPlayer : MonoBehaviour
 
     public void Setup(Transform target){
         this.target = target;
+        Destroy(gameObject, 15f);
     }
 }

@@ -4,7 +4,7 @@ using static UtilsClass;
 
 public class spawn : MonoBehaviour
 {
-    private bool canEarth=false;
+    public bool canEarth=false;
 
     public event EventHandler OnUsedEarth;
 

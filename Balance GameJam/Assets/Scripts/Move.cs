@@ -11,7 +11,7 @@ public class Move : MonoBehaviour
     private float keyMoveY = 0;
     private Vector3 velocity = Vector3.zero;
 
-    private bool canDash = false;
+    public bool canDash = false;
     public float dashingPower;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;

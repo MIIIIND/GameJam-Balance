@@ -28,8 +28,12 @@ public class ElementalOverload : MonoBehaviour
     public float pEarth;
     public float pWind;
 
+    public float addFire;
+    public float addWater;
+    public float addWind;
+    public float addEarth;
+
     void Start() {
-        //InvokeRepeating("TimerScreen", 0.1f, 0.1f);  
         InvokeRepeating("TimerIncrease", 1f, 1f);
         GetComponent<Move>().OnUsedWind += decreaseWind;
         GetComponent<Aim>().OnShootBubble += decreaseWater;
@@ -99,17 +103,16 @@ public class ElementalOverload : MonoBehaviour
 
     void TimerIncrease() {
         if(windGaugeBalance > 0 ){
-            windGaugeBalance -= 0.5f;
-            print(windGaugeBalance);
+            windGaugeBalance -= addWind;
         }
         if(fireGaugeBalance>0){
-            fireGaugeBalance -= 0.5f;
+            fireGaugeBalance -= addFire;
         }
         if(waterGaugeBalance > 0){
-            waterGaugeBalance -= 0.5f;
+            waterGaugeBalance -= addWater;
         }
         if(earthGaugeBalance > 0){
-            earthGaugeBalance -= 0.5f;
+            earthGaugeBalance -= addEarth;
         }
     }
 }
