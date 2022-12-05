@@ -13,23 +13,34 @@ public class Scoring : MonoBehaviour
     public event EventHandler OnHealthItem;
 
     public TilemapRenderer fireColorActivation;
+    public TilemapRenderer waterColorActivation;
+    public TilemapRenderer earthColorActivation;
+    public TilemapRenderer windColorActivation;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.CompareTag("Fire") && GameObject.Find("OffrandeFire") == null){
+        if(collision.CompareTag("Fire") && GameObject.Find("OffrandeFire") == null)
+        {
             OnPickedFire?.Invoke(this,EventArgs.Empty);
-            fireColorActivation.GetComponent<TilemapRenderer>().sortingOrder = 1;
+            fireColorActivation.GetComponent<TilemapRenderer>().sortingOrder = -25;
         }
-        else if(collision.CompareTag("Water") && GameObject.Find("OffrandeWater") == null){
+        else if(collision.CompareTag("Water") && GameObject.Find("OffrandeWater") == null)
+        {
             OnPickedWater?.Invoke(this,EventArgs.Empty);
+            waterColorActivation.GetComponent<TilemapRenderer>().sortingOrder = -25;
         }
-        else if(collision.CompareTag("Emptiness") && GameObject.Find("OffrandeEmptiness") == null){
+        else if(collision.CompareTag("Emptiness") && GameObject.Find("OffrandeEmptiness") == null)
+        {
             OnPickedEmptiness?.Invoke(this,EventArgs.Empty);
         }
-        else if(collision.CompareTag("Wind") && GameObject.Find("OffrandeWind") == null){
-            OnPickedWind?.Invoke(this,EventArgs.Empty);
+        else if(collision.CompareTag("Wind") && GameObject.Find("OffrandeWind") == null)
+        {
+            OnPickedWind?.Invoke(this, EventArgs.Empty);
+            windColorActivation.GetComponent<TilemapRenderer>().sortingOrder = -25;
         }
-        else if(collision.CompareTag("Earth") && GameObject.Find("OffrandeEarth") == null){
+        else if(collision.CompareTag("Earth") && GameObject.Find("OffrandeEarth") == null)
+        {
             OnPickedEarth?.Invoke(this,EventArgs.Empty);
+            earthColorActivation.GetComponent<TilemapRenderer>().sortingOrder = -25;
         }
         else if (collision.CompareTag("Enemi"))
         {

@@ -45,6 +45,9 @@ public class LifeTimer : MonoBehaviour
     {
         string seconds = (currentTime % 60).ToString("00");
         string minutes = (Math.Floor(currentTime / 60) % 60).ToString("00");
+        string ms = (Math.Floor((currentTime / 100) % 100)).ToString();
+        //  string ms = (currentTime /60)
+
 
 
         currentTime -= 1 * Time.deltaTime;
