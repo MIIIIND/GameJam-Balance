@@ -15140,10 +15140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98e3531ad98e3c4684e5df0d6e49577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireGauge: 10
-  waterGauge: 200
-  windGauge: 10
-  earthGauge: 10
+  fireGauge: 250
+  waterGauge: 500
+  windGauge: 5
+  earthGauge: 5
   globalLight: {fileID: 939562397}
   pFire: 0
   pWater: 0
@@ -39355,7 +39355,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 0.9982604, b: 0.7311321, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
